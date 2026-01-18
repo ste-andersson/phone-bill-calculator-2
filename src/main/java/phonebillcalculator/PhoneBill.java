@@ -81,4 +81,13 @@ public class PhoneBill {
     public double calculateTotalCost() {
         return baseCost + calculateOverageCost() + calculateTaxCost();
     }
+
+    //Methods toString
+    public String toString() {
+        return "Phone Bill Statement #" + id + "\n\n" +
+                "Plan: $" + String.format("%.2f", baseCost) + "\n" +
+                "Overage: $" + String.format("%.2f",calculateOverageCost()) + "\n" +
+                "Tax: $" + String.format("%.2f", calculateTaxCost()) + "\n" +
+                "Total: $" + String.format("%.2f", calculateTotalCost());
+    }
 }
